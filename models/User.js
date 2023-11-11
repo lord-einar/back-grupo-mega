@@ -1,14 +1,5 @@
-const { Sequelize, DataTypes, Model } = require("sequelize");
-
-const sequelize = new Sequelize(
-  process.env.DATABASE,
-  process.env.USER,
-  process.env.PASS,
-  {
-    host: "localhost",
-    dialect: "mysql",
-  }
-);
+const { DataTypes, Model } = require("sequelize");
+const {sequelize} = require("../config/db.config")
 
 class User extends Model {}
 
